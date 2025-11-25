@@ -16,9 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # No build step needed because Reveal.js is loaded from CDN
       - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v5
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
